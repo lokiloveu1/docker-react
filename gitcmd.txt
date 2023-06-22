@@ -1,0 +1,36 @@
+#go to the folder that you want to link to git
+loki$ cd frontend/
+#init git for this folder
+loki$ git init
+Initialized empty Git repository in /Users/loki/frontend/.git/
+#add content to git repo
+frontend loki$ git add .
+#commit content to git repo
+frontend loki$ git commit -m "initial commit"
+[master (root-commit) 039327d] initial commit
+ 21 files changed, 17879 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 Dockerfile
+ create mode 100644 Dockerfile.dev
+ create mode 100644 README.md
+ create mode 100644 docker-compose.yml
+ create mode 100644 package-lock.json
+ create mode 100644 package.json
+ create mode 100644 public/favicon.ico
+ create mode 100644 public/index.html
+ create mode 100644 public/logo192.png
+ create mode 100644 public/logo512.png
+ create mode 100644 public/manifest.json
+ create mode 100644 public/robots.txt
+ create mode 100644 src/App.css
+ create mode 100644 src/App.js
+ create mode 100644 src/App.test.js
+ create mode 100644 src/index.css
+ create mode 100644 src/index.js
+ create mode 100644 src/logo.svg
+ create mode 100644 src/reportWebVitals.js
+ create mode 100644 src/setupTests.js
+#link local repo to remote github repo
+frontend loki$ git remote add origin git@github.com:lokiloveu1/docker-react.git
+#push current local repo to remote master branch
+frontend loki$ git push origin master
