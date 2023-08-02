@@ -3,9 +3,8 @@ sudo: required
 services:
   - docker
 
-#before_install
 before_install:
-  - dpcker build -t loki/docker-react -f Dockerfile.dev .
+  - docker build -t loki/docker-react -f Dockerfile.dev .
 
 script:
   - docker run -e CI=true loki/docker-react npm run test
