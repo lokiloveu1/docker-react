@@ -1,0 +1,10 @@
+sudo: required
+# travis will install a copy of docker to deploy
+services:
+  - docker
+
+before_install:
+  - dpcker build -t loki/docker-react -f Dockerfile.dev .
+
+script:
+  - docker run -e CI=true loki/docker-react npm run test
